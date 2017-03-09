@@ -79,12 +79,6 @@ public class TestAdmin {
         boolean exist = this.admin.classExists("ECS10",2017)&&this.admin.classExists("ECS20",2017)&&this.admin.classExists("ECS30",2017);
         assertFalse(exist);
     }
-// this is a test to see if a class is being taught with no name
-    @Test
-    public void testIfNoName6(){
-        this.admin.createClass(null,2017,"Gygi",15);
-        assertFalse(this.admin.classExists(null,2017));
-    }
 // this is a test to make sure the class does not change capacity to a lower capacity
     @Test
     public void testChangeCapacityLower7() {
@@ -104,9 +98,5 @@ public class TestAdmin {
     this.admin.changeCapacity("Test",2017,2);
     assertFalse(this.admin.getClassCapacity("Test",2017) < temp);
     }
-
-
-
-
 }
 
