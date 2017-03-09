@@ -91,9 +91,9 @@ public class TestAdmin {
     @Test
     public void testExtraStudent8(){
     this.admin.createClass("Test",2017,"Instructor",3);
-    this.student.registerForClass("CHILD1","Test",2017);
-    this.student.registerForClass("CHILD2","Test",2017);
-    this.student.registerForClass("CHILD3","Test",2017);
+    this.student.registerForClass("student1","Test",2017);
+    this.student.registerForClass("student2","Test",2017);
+    this.student.registerForClass("student3","Test",2017);
     int temp = this.admin.getClassCapacity("Test",2017);
     this.admin.changeCapacity("Test",2017,2);
     assertFalse(this.admin.getClassCapacity("Test",2017) < temp);
